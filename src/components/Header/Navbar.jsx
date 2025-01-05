@@ -27,18 +27,18 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`w-full shadow-md bg-[#000000] transition-transform duration-700 ease-in-out text-white
+      className={`w-full shadow-md md:bg-[#000000] bg-[#131313] transition-transform duration-700 ease-in-out text-white
          px-2 py-1 flex items-center md:gap-1 gap-3  ${
            isSticky ? "sticky-nav slide-down" : "static top-0 left-0 z-[99]" //absolute top-0 left-0 z-[99]
          }`}
     >
       {/*  Left Section */}
-      <div className="flex justify-center items-center gap-2">
+      <div className=" flex justify-center items-center gap-2">
         <div className="text-center">
           <img
             src="/images/navbar-logo-left.svg"
             alt="navbar-logo-left"
-            className="h-8 w-auto"
+            className="md:h-8 h-14 w-auto"
           />
         </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
           <img
             src="/images/navbar-logo-right.svg"
             alt="navbar-logo-right"
-            className="h-8 w-auto"
+            className="md:h-8 h-14 w-auto"
           />
         </div>
       </div>
