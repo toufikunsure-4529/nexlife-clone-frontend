@@ -38,8 +38,13 @@ const Navbar = () => {
           <img
             src="/images/navbar-logo-left.svg"
             alt="navbar-logo-left"
-            className="md:h-8 h-14 w-auto"
+            className="md:h-8 h-14 w-auto hidden md:flex"
           />
+          <img
+            src="/images/navbar-logo-left-sm.svg"
+            alt="navbar-logo-left-sm"
+            className="md:h-8 h-14 w-auto flex md:hidden"
+          />{" "}
         </div>
 
         {/* Logo Section */}
@@ -56,7 +61,12 @@ const Navbar = () => {
           <img
             src="/images/navbar-logo-right.svg"
             alt="navbar-logo-right"
-            className="md:h-8 h-14 w-auto"
+            className="md:h-8 h-14 w-auto hidden md:flex"
+          />
+          <img
+            src="/images/navbar-logo-right-sm.svg"
+            alt="navbar-logo-right-sm"
+            className="md:h-8 h-14 w-auto flex md:hidden"
           />
         </div>
       </div>
