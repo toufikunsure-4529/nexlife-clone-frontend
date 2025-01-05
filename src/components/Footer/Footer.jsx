@@ -10,7 +10,7 @@ import {
   faLinkedin,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-function Footer({ footerBg = "#131313", isLogoVisible = true }) {
+function Footer({ footerBg, isLogoVisible = true }) {
   const footerMenu = [
     {
       title: "Home",
@@ -55,7 +55,11 @@ function Footer({ footerBg = "#131313", isLogoVisible = true }) {
   ];
 
   return (
-    <div className={`w-full pt-5 bg-[${footerBg}] `}>
+    <div
+      className={`w-full pt-5 ${
+        footerBg ? `bg-[${footerBg}]` : "bg-[#131313]"
+      } `}
+    >
       <div
         className={` ${
           isLogoVisible ? "flex" : "hidden"

@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <Outlet />
-      <Footer footerBg="#131313" />
+      <Footer />
     </>
   );
 }
