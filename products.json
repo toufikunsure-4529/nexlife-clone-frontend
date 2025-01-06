@@ -1,0 +1,26 @@
+[
+  {
+    "id": 10001,
+    "type": "dryftSeries",
+    "name": "Nex Dryft A95 BLDC IoT",
+    "description": "Astonishing Performance with Low Noise ABS Blades",
+    "price": 12590,
+    "image": "/images/products/1001-Classic-white.png",
+    "rating": 4.5,
+    "availableColor": ["Classic White", "Walnut", "Chestnut Brown"],
+    "itemDescription": [
+      "PeakTorq™ BLDC...",
+      "Airfluence ABS Blade...",
+      "Double Ball Bearing..."
+    ],
+    "specification": {
+      "InputVoltage": "180-280V",
+      "rating": "5",
+      "motor": "BLDC",
+      "rpm": "340",
+      "watt": "41",
+      "ad": "250",
+      "sweep": "1200"
+    }
+  }
+]

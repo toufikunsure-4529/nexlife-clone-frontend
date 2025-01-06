@@ -107,7 +107,7 @@ const Navbar = () => {
           HOME
         </NavLink>
         <NavLink
-          to="/fans"
+          to="/ceiling-fans"
           className={({ isActive }) =>
             isActive ? "text-cyan-400" : "text-white hover:underline"
           }
