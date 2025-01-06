@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Notification from "./components/Header/Notification";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Notification />
       <Outlet />
       <Footer />
     </>

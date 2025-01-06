@@ -15,8 +15,10 @@ function VideoContent() {
         />
       </div>
 
-      <div className="w-full px-6 py-10 text-gray-100 flex items-center gap-36">
-        <div className="w-1/2">
+      {/* 2snd video */}
+
+      <div className="w-full md:px-6 py-10 text-gray-100 flex items-center gap-36 flex-col md:flex-row">
+        <div className="md-w-1/2 w-full">
           <video
             src="/images/static-card/aeirology-bg.mp4"
             autoPlay
@@ -25,9 +27,11 @@ function VideoContent() {
             className="max-w-full max-h-full"
           />
         </div>
-        <div className="w-1/2"  data-aos="fade-up"
-        data-aos-anchor-placement="top-center">
-          <h3 className="font-semibold text-5xl line-clamp-3 mb-5">
+        <div
+          className="md-w-1/2 w-full px-6"
+          data-aos-anchor-placement="top-center"
+        >
+          <h3 className="font-semibold md:text-5xl text-3xl line-clamp-3 mb-5">
             The{" "}
             <span className="text-cyan-400">
               AeirologyTM <br />

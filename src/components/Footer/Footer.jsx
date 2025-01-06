@@ -27,7 +27,7 @@ function Footer({ footerBg, isLogoVisible = true }) {
     },
     {
       title: "Discover",
-      link: [{ linkTitle: "About Us", path: "#" }],
+      link: [{ linkTitle: "About Us", path: "/about-us" }],
     },
     {
       title: "Media",
@@ -39,7 +39,7 @@ function Footer({ footerBg, isLogoVisible = true }) {
         { linkTitle: "Installation Guide", path: "#" },
 
         { linkTitle: "Warranty", path: "#" },
-        { linkTitle: "Contact Us", path: "#" },
+        { linkTitle: "Contact Us", path: "/contact-us" },
         { linkTitle: "Register Complaint", path: "#" },
         { linkTitle: "Dealer Locator", path: "#" },
         { linkTitle: "FAQs", path: "#" },

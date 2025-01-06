@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faBars,
+  faTimes,
+  faChevronUp,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Footer/Footer";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 
@@ -178,41 +184,91 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div
-          className="fixed top-0 left-0 z-[999] w-full h-screen px-4 md:hidden flex flex-col space-y-4 py-4 navOpenMenuAnimation "
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-          }}
-        >
+        <div className="fixed top-0 left-0 z-[999] w-full h-screen px-4 md:hidden flex flex-col space-y-4 py-4 bg-black bg-opacity-90 navOpenMenuAnimation">
           <div className="flex justify-end items-center">
             <button
-              className="text-white hover:text-cyan-400 text-lg  text-center h-10 w-10 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full border "
+              className="text-white hover:text-cyan-400 text-lg h-10 w-10 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full border"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
             </button>
           </div>
+
+          {/* Main Menu */}
           <NavLink
             to="/"
-            className={({ isActive }) =>
-              isActive ? "text-cyan-400" : "text-white hover:underline"
-            }
+            className="text-white"
             onClick={() => setMenuOpen(false)}
           >
             HOME
           </NavLink>
+
+          <AccordionMenu
+            label="FANS"
+            items={[
+              { label: "Calling" },
+              { label: "TPW" },
+              { label: "Download Catalog" },
+              { label: "IOT Manual" },
+            ]}
+          />
+
+          <AccordionMenu label="DISCOVER" items={[{ label: "About Us" }]} />
+
+          <AccordionMenu label="MEDIA" items={[{ label: "Blogs" }]} />
+
+          <AccordionMenu
+            label="SUPPORT"
+            items={[
+              { label: "Installation Guide" },
+              { label: "Warranty" },
+              { label: "Contact Us" },
+              { label: "Register Complaint" },
+              { label: "Dealer Locator" },
+              { label: "FAQs" },
+              { label: "Terms and Conditions" },
+              { label: "Privacy Policy" },
+            ]}
+          />
+
           <NavLink
-            to="/fans"
-            className={({ isActive }) =>
-              isActive ? "text-cyan-400" : "text-white hover:underline"
-            }
+            to=""
+            className="text-white"
             onClick={() => setMenuOpen(false)}
           >
-            FANS
+            CORPORATE ENQUIRY
           </NavLink>
         </div>
       )}
     </nav>
+  );
+};
+
+{
+  /* Accordion Menu Component */
+}
+const AccordionMenu = ({ label, items }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <div>
+      <button
+        className="text-white text-lg w-full flex justify-between items-center py-2"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {label}
+        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+      </button>
+      {isOpen && (
+        <div className="pl-4">
+          {items.map((item, index) => (
+            <p key={index} className="text-gray-400 hover:underline py-1">
+              {item.label}
+            </p>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

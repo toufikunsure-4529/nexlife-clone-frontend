@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments, faPhone } from "@fortawesome/free-solid-svg-icons";
+
 
 function HeroSection() {
   const el = useRef(null);
@@ -34,28 +33,6 @@ function HeroSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Top Notification Bar */}
-      <div className="bg-cyan-500 text-gray-100 w-full hidden md:flex  items-center justify-between text-sm py-2">
-        <p className="mx-4">
-          <span>
-            <FontAwesomeIcon icon={faComments} />
-          </span>
-          Extended hours, extended care. From 9am to 9pm.
-        </p>
-        <p className="mx-4">
-          <span>
-            <FontAwesomeIcon icon={faPhone} />
-          </span>
-          Instant support on WhatsApp is just a text away.
-        </p>
-        <p className="mx-4">
-          <span>
-            <FontAwesomeIcon icon={faComments} />
-          </span>
-          Get 24x7 digital assistance.
-        </p>
-      </div>
-
       {/* Hero Content */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col gap-5 text-gray-100  justify-center">
         <motion.h3
@@ -64,7 +41,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to Innovation
+          Welcome to Nexlife
         </motion.h3>
 
         <motion.div
@@ -79,13 +56,14 @@ function HeroSection() {
         </motion.div>
 
         <motion.i
-          className="mt-6 text-lg md:text-xl max-w-3xl text-gray-200"
+          className="mt-6 text-sm md:text-xl max-w-3xl text-gray-200"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          Empower your business with cutting-edge solutions tailored to your
-          needs. <br /> Experience the future of digital transformation with us.
+          Tested and verified by DSIR laboratory, with air thrust under the fan
+          vs. <br /> conventional star rated fan. Aerofoil ABS blades resulting
+          in low noise.
         </motion.i>
 
         <motion.div
