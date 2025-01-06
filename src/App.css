@@ -1,23 +1,23 @@
 /* nav bar */
 
 .sticky-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    animation: slideDown 0.5s ease forwards; /* Add 'forwards' to keep final state */
-  }
-  
-  .navOpenMenuAnimation{
-    animation: slideDown 0.5s ease forwards; /* Add 'forwards' to keep final state */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: slideDown 0.5s ease forwards; /* Add 'forwards' to keep final state */
+}
 
+.navOpenMenuAnimation {
+  animation: slideDown 0.5s ease forwards; /* Add 'forwards' to keep final state */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Initially above the viewport */
   }
-  
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%); /* Initially above the viewport */
-    }
-    to {
-      transform: translateY(0); /* Slide into place */
-    }
+  to {
+    transform: translateY(0); /* Slide into place */
   }
+}
+
