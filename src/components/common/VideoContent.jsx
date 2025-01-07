@@ -31,7 +31,7 @@ function VideoContent() {
           className="md-w-1/2 w-full px-6"
           data-aos-anchor-placement="top-center"
         >
-          <h3 className="font-semibold md:text-5xl text-3xl line-clamp-3 mb-5">
+          <h3 className="font-semibold md:text-5xl text-2xl line-clamp-3 mb-5">
             The{" "}
             <span className="text-cyan-400">
               AeirologyTM <br />

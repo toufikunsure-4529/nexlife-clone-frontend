@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
@@ -55,11 +55,13 @@ const Navbar = () => {
 
         {/* Logo Section */}
         <div className="text-center">
-          <img
-            src="/images/logo.svg"
-            alt="Logo"
-            className="h-18 py-2 w-auto "
-          />
+          <Link to="/">
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              className="h-18 py-2 w-auto "
+            />
+          </Link>
         </div>
 
         {/* Left Section */}
@@ -206,28 +208,31 @@ const Navbar = () => {
           <AccordionMenu
             label="FANS"
             items={[
-              { label: "Calling" },
-              { label: "TPW" },
-              { label: "Download Catalog" },
-              { label: "IOT Manual" },
+              { label: "Celling", link: "/ceiling-fans" },
+              { label: "TPW", link: "" },
+              { label: "Download Catalog", link: "" },
+              { label: "IOT Manual", link: "" },
             ]}
           />
 
-          <AccordionMenu label="DISCOVER" items={[{ label: "About Us" }]} />
+          <AccordionMenu
+            label="DISCOVER"
+            items={[{ label: "About Us", link: "/about-us" }]}
+          />
 
-          <AccordionMenu label="MEDIA" items={[{ label: "Blogs" }]} />
+          <AccordionMenu label="MEDIA" items={[{ label: "Blogs", link: "" }]} />
 
           <AccordionMenu
             label="SUPPORT"
             items={[
-              { label: "Installation Guide" },
-              { label: "Warranty" },
-              { label: "Contact Us" },
-              { label: "Register Complaint" },
-              { label: "Dealer Locator" },
-              { label: "FAQs" },
-              { label: "Terms and Conditions" },
-              { label: "Privacy Policy" },
+              { label: "Installation Guide", link: "" },
+              { label: "Warranty", link: "" },
+              { label: "Contact Us", link: "/contact-us" },
+              { label: "Register Complaint", link: "" },
+              { label: "Dealer Locator", link: "" },
+              { label: "FAQs", link: "" },
+              { label: "Terms and Conditions", link: "" },
+              { label: "Privacy Policy", link: "" },
             ]}
           />
 
@@ -262,9 +267,13 @@ const AccordionMenu = ({ label, items }) => {
       {isOpen && (
         <div className="pl-4">
           {items.map((item, index) => (
-            <p key={index} className="text-gray-400 hover:underline py-1">
+            <Link
+              to={item.link}
+              key={index}
+              className="text-gray-400 hover:underline py-1"
+            >
               {item.label}
-            </p>
+            </Link>
           ))}
         </div>
       )}

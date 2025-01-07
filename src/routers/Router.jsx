@@ -9,10 +9,7 @@ import ContactUs from "../pages/ContactUs";
 import AboutUs from "../pages/AboutUs";
 import PagenotFound404 from "../components/common/PagenotFound404";
 import ProductCategories from "../pages/ProductCategories";
-import ProductDetails from "../components/Categories/ProductDetails";
-import { useEffect, useState } from "react";
-
-
+import ProductDetails from "../components/Products/ProductDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

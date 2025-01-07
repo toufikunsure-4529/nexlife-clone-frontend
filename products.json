@@ -1,26 +1,57 @@
 [
   {
-    "id": 10001,
-    "type": "dryftSeries",
-    "name": "Nex Dryft A95 BLDC IoT",
-    "description": "Astonishing Performance with Low Noise ABS Blades",
-    "price": 12590,
-    "image": "/images/products/1001-Classic-white.png",
-    "rating": 4.5,
-    "availableColor": ["Classic White", "Walnut", "Chestnut Brown"],
-    "itemDescription": [
-      "PeakTorq™ BLDC...",
-      "Airfluence ABS Blade...",
-      "Double Ball Bearing..."
-    ],
-    "specification": {
-      "InputVoltage": "180-280V",
-      "rating": "5",
-      "motor": "BLDC",
-      "rpm": "340",
-      "watt": "41",
-      "ad": "250",
-      "sweep": "1200"
-    }
+    "id": 1,
+    "name": "Nex Dryft A95 BLDC IoT Classic White",
+    "price": 14990,
+    "airDelivery": "220 - 229 CMM",
+    "sweep": "1200 mm (48 inch)",
+    "speed": "High Speed (>370 RPM)",
+    "remote": "Remote Include",
+    "starRating": 9,
+    "image": "https://nexlife.in/ProductImgs/20/listing/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Nex Aero 900 Smart Ceiling Fan",
+    "price": 20000,
+    "airDelivery": "230 - 239 CMM",
+    "sweep": "1200 mm (48 inch)",
+    "speed": "Comfort Speed (<370 RPM)",
+    "remote": "Works with standard Regulator",
+    "starRating": 5,
+    "image": "https://nexlife.in/ProductImgs/19/listing/1.png"
+  },
+  {
+    "id": 3,
+    "name": "Nex Stellar A85 LED Light Fan",
+    "price": 10990,
+    "airDelivery": "240 - 249 CMM",
+    "sweep": "1200 mm (48 inch)",
+    "speed": "High Speed (>370 RPM)",
+    "remote": "Remote Include",
+    "starRating": 3,
+    "image": "https://nexlife.in/ProductImgs/18/listing/1.png"
+  },
+  {
+    "id": 4,
+    "name": "Nex Stellar A85 LED Light Fan",
+    "price": 10990,
+    "airDelivery": "240 - 249 CMM",
+    "sweep": "1200 mm (48 inch)",
+    "speed": "High Speed (>370 RPM)",
+    "remote": "Remote Include",
+    "starRating": 5,
+    "image": "https://nexlife.in/ProductImgs/18/listing/1.png"
+  },
+  {
+    "id": 5,
+    "name": "Nex Stellar A85 LED Light Fan",
+    "price": 10990,
+    "airDelivery": "240 - 249 CMM",
+    "sweep": "1200 mm (48 inch)",
+    "speed": "High Speed (>370 RPM)",
+    "remote": "Remote Include",
+    "starRating": 4,
+    "image": "https://nexlife.in/ProductImgs/18/listing/1.png"
   }
 ]

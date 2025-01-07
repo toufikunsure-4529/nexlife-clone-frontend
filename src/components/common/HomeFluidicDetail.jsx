@@ -14,8 +14,8 @@ const HomeFluidicDetail = () => {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center text-gray-100">
           <div className="flex flex-col gap-4 md:pb-60 md:pl-44">
-            <h5 className="text-4xl uppercase leading-tight">
-              <span className="text-5xl font-bold">D</span>esigned with <br />
+            <h5 className="md:text-4xl text-2xl uppercase leading-tight">
+              <span className="md:text-5xl text-4xl font-bold">D</span>esigned with <br />
               <span className="text-cyan-300">fluidic precision</span>
             </h5>
             <p className="text-base">

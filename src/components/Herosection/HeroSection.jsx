@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 
 function HeroSection() {
   const el = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -72,10 +73,10 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
         >
-          <button className="md:px-6 px-3 py-2 md:py-3 bg-cyan-500 text-gray-100 rounded-lg text-lg font-medium hover:bg-cyan-600 transition duration-300">
+          <button className="md:px-6 px-3 py-2 md:py-3 bg-cyan-500 text-gray-100 rounded-lg text-lg font-medium hover:bg-cyan-600 transition duration-300" onClick={()=>navigate("/ceiling-fans")}>
             Get Started
           </button>
-          <button className="md:px-6 px-3 py-2 md:py-3 border border-gray-100 bg-black md:bg-transparent text-gray-100 rounded-lg text-lg font-medium hover:bg-gray-100 hover:text-cyan-500 transition duration-300">
+          <button className="md:px-6 px-3 py-2 md:py-3 border border-gray-100 bg-black md:bg-transparent text-gray-100 rounded-lg text-lg font-medium hover:bg-gray-100 hover:text-cyan-500 transition duration-300" onClick={()=>navigate("about-us")}>
             Learn More
           </button>
         </motion.div>

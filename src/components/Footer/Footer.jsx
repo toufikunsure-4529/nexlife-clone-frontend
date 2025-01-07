@@ -131,7 +131,7 @@ function Footer({ footerBg, isLogoVisible = true }) {
         </div>
       </Container>
       <div
-        className={`mt-6 bg-black py-5 px-20 text-center md:text-left ${
+        className={`mt-6 bg-black py-5 md:px-20 text-center md:text-left ${
           isLogoVisible ? "flex" : "hidden"
         } justify-between items-center flex-col md:flex-row gap-5`}
       >
