@@ -24,6 +24,12 @@ const FilterItem = ({ onApplyFilters, onClearFilters }) => {
     onApplyFilters(filterText, filters);
   };
 
+  const clearFilters = () => {
+    setFilterText("");
+    setFilters({});
+    onClearFilters();
+  };
+
   return (
     <div className="w-full md:w-1/4 p-4 bg-[#00000] rounded shadow">
       <p className="text-xl text-gray-400 uppercase font-semibold mb-3">
@@ -60,7 +66,7 @@ const FilterItem = ({ onApplyFilters, onClearFilters }) => {
         </button>
         <button
           className="bg-cyan-500 text-black px-4 py-2 rounded-full text-sm"
-          onClick={onClearFilters}
+          onClick={clearFilters}
         >
           Clear
         </button>

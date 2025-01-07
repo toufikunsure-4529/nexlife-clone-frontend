@@ -13,7 +13,7 @@ const AccordionMenu = ({
   return (
     <div className="mb-4">
       <button
-        className="w-full  flex justify-between items-center bg-[#191919] p-2 rounded text-gray-200"
+        className="w-full flex justify-between items-center bg-[#191919] p-2 rounded text-gray-200"
         onClick={() => setIsOpen(!isOpen)}
       >
         {label}

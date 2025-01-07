@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Nex Dryft A95 BLDC IoT Classic White",
+    "description": "Elegant Design with Effortless Air Delivery",
     "price": 14990,
     "airDelivery": "220 - 229 CMM",
     "sweep": "1200 mm (48 inch)",
@@ -13,6 +14,8 @@
   {
     "id": 2,
     "name": "Nex Aero 900 Smart Ceiling Fan",
+    "description": "Elegant Design with Effortless Air Delivery",
+
     "price": 20000,
     "airDelivery": "230 - 239 CMM",
     "sweep": "1200 mm (48 inch)",
@@ -24,6 +27,8 @@
   {
     "id": 3,
     "name": "Nex Stellar A85 LED Light Fan",
+    "description": "Elegant Design with Effortless Air Delivery",
+
     "price": 10990,
     "airDelivery": "240 - 249 CMM",
     "sweep": "1200 mm (48 inch)",
@@ -35,6 +40,8 @@
   {
     "id": 4,
     "name": "Nex Stellar A85 LED Light Fan",
+    "description": "Elegant Design with Effortless Air Delivery",
+
     "price": 10990,
     "airDelivery": "240 - 249 CMM",
     "sweep": "1200 mm (48 inch)",
@@ -46,6 +53,8 @@
   {
     "id": 5,
     "name": "Nex Stellar A85 LED Light Fan",
+    "description": "Elegant Design with Effortless Air Delivery",
+
     "price": 10990,
     "airDelivery": "240 - 249 CMM",
     "sweep": "1200 mm (48 inch)",

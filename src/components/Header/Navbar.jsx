@@ -243,6 +243,13 @@ const Navbar = () => {
           >
             CORPORATE ENQUIRY
           </NavLink>
+          <NavLink
+            to="/contact-us"
+            className="text-white uppercase text-md"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact Us
+          </NavLink>
         </div>
       )}
     </nav>
