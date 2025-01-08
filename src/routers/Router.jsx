@@ -9,6 +9,7 @@ import ContactUs from "../pages/ContactUs";
 import AboutUs from "../pages/AboutUs";
 import PagenotFound404 from "../components/common/PagenotFound404";
 import ProductCategories from "../pages/ProductCategories";
+import Fans from "../pages/Fans";
 import ProductDetails from "../components/Products/ProductDetails";
 
 const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/ceiling-fans" element={<ProductCategories />} />
       <Route path="/ceiling-fans/:productId" element={<ProductDetails />} />
+      <Route path="/fans" element={<Fans />} />
       <Route path="/*" element={<PagenotFound404 />} />
     </Route>
   )

@@ -44,7 +44,7 @@ const FilterItem = ({ onApplyFilters, onClearFilters }) => {
         onChange={(e) => setFilterText(e.target.value)}
       />
       <AccordionMenu
-        label="Air Delivery"
+        label="Air Delivery (CMM)"
         category="airDelivery"
         items={["220 - 229 CMM", "230 - 239 CMM", "240 - 249 CMM"]}
         selectedFilters={filters.airDelivery || []}
@@ -54,6 +54,20 @@ const FilterItem = ({ onApplyFilters, onClearFilters }) => {
         label="Speed"
         category="speed"
         items={["High Speed (>370 RPM)", "Comfort Speed (<370 RPM)"]}
+        selectedFilters={filters.speed || []}
+        onChange={handleFilterChange}
+      />
+      <AccordionMenu
+        label="Remote Compatibility"
+        category="speed"
+        items={["Remote Included", "Works with standard Regulator"]}
+        selectedFilters={filters.speed || []}
+        onChange={handleFilterChange}
+      />
+      <AccordionMenu
+        label="BEE Star Rating"
+        category="speed"
+        items={["5 Star", "4 Star", "3 Star", "2 Star", "1 Star"]}
         selectedFilters={filters.speed || []}
         onChange={handleFilterChange}
       />

@@ -9,7 +9,13 @@
     "speed": "High Speed (>370 RPM)",
     "remote": "Remote Include",
     "starRating": 9,
-    "image": "https://nexlife.in/ProductImgs/20/listing/1.png"
+    "image": "https://nexlife.in/ProductImgs/20/listing/1.png",
+    "thumbnails": [
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+    ]
   },
   {
     "id": 2,
@@ -22,7 +28,13 @@
     "speed": "Comfort Speed (<370 RPM)",
     "remote": "Works with standard Regulator",
     "starRating": 5,
-    "image": "https://nexlife.in/ProductImgs/19/listing/1.png"
+    "image": "https://nexlife.in/ProductImgs/19/listing/1.png",
+    "thumbnails": [
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+    ]
   },
   {
     "id": 3,
@@ -35,7 +47,13 @@
     "speed": "High Speed (>370 RPM)",
     "remote": "Remote Include",
     "starRating": 3,
-    "image": "https://nexlife.in/ProductImgs/18/listing/1.png"
+    "image": "https://nexlife.in/ProductImgs/18/listing/1.png",
+    "thumbnails": [
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+    ]
   },
   {
     "id": 4,
@@ -48,7 +66,13 @@
     "speed": "High Speed (>370 RPM)",
     "remote": "Remote Include",
     "starRating": 5,
-    "image": "https://nexlife.in/ProductImgs/18/listing/1.png"
+    "image": "https://nexlife.in/ProductImgs/18/listing/1.png",
+    "thumbnails": [
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+    ]
   },
   {
     "id": 5,
@@ -60,6 +84,12 @@
     "speed": "High Speed (>370 RPM)",
     "remote": "Remote Include",
     "starRating": 4,
-    "image": "https://nexlife.in/ProductImgs/18/listing/1.png"
+    "image": "https://nexlife.in/ProductImgs/18/listing/1.png",
+    "thumbnails": [
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
+      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+    ]
   }
 ]

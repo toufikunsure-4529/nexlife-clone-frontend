@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
-import { Link } from "react-router-dom";
+import { Link,useNavigate  } from "react-router-dom";
 import Slider from "react-slick";
 
 function Explore({ ViewAllBtnVisible = true }) {
@@ -39,6 +39,8 @@ function Explore({ ViewAllBtnVisible = true }) {
     window.addEventListener("resize", updateView);
     return () => window.removeEventListener("resize", updateView);
   }, []);
+
+  const navigate=useNavigate()
 
   const sliderSettings = {
     dots: true,
@@ -119,7 +121,7 @@ function Explore({ ViewAllBtnVisible = true }) {
           )}
 
           {ViewAllBtnVisible && (
-            <button className="uppercase h-14 w-auto px-14 py-2 bg-cyan-400 hover:bg-black hover:border hover:border-cyan-400 hover:text-gray-100 text-black rounded-full transition-all duration-500 ease-in-out">
+            <button className="uppercase h-14 w-auto px-14 py-2 bg-cyan-400 hover:bg-black hover:border hover:border-cyan-400 hover:text-gray-100 text-black rounded-full transition-all duration-500 ease-in-out" onClick={()=>navigate("/ceiling-fans")}>
               View all
             </button>
           )}

@@ -13,16 +13,16 @@ import {
 function Footer({ footerBg, isLogoVisible = true }) {
   const footerMenu = [
     {
-      title: "Home",
-      link: [{ linkTitle: "", path: "#" }],
+      title: "Nexlife",
+      link: [{ linkTitle: "Home", path: "/" }],
     },
     {
       title: "Fans",
       link: [
-        { linkTitle: "Ceiling", path: "#" },
-        { linkTitle: "TPW", path: "#" },
-        { linkTitle: "Download Catalogue", path: "#" },
-        { linkTitle: "IOT Manual", path: "#" },
+        { linkTitle: "Ceiling", path: "/ceiling-fan" },
+        { linkTitle: "TPW", path: "/ceiling-fan" },
+        { linkTitle: "Download Catalogue", path: "/fans" },
+        { linkTitle: "IOT Manual", path: "/fans" },
       ],
     },
     {
@@ -31,26 +31,26 @@ function Footer({ footerBg, isLogoVisible = true }) {
     },
     {
       title: "Media",
-      link: [{ linkTitle: "Blogs", path: "#" }],
+      link: [{ linkTitle: "Blogs", path: "/about-us" }],
     },
     {
       title: "Fans",
       link: [
-        { linkTitle: "Installation Guide", path: "#" },
+        { linkTitle: "Installation Guide", path: "/fans" },
 
-        { linkTitle: "Warranty", path: "#" },
+        { linkTitle: "Warranty", path: "/about-us" },
         { linkTitle: "Contact Us", path: "/contact-us" },
-        { linkTitle: "Register Complaint", path: "#" },
-        { linkTitle: "Dealer Locator", path: "#" },
-        { linkTitle: "FAQs", path: "#" },
-        { linkTitle: "Terms and Conditions", path: "#" },
+        { linkTitle: "Register Complaint", path: "/contact-us" },
+        { linkTitle: "Dealer Locator", path: "/contact-us" },
+        { linkTitle: "FAQs", path: "/about-us" },
+        { linkTitle: "Terms and Conditions", path: "/about-us" },
         { linkTitle: "Privacy Policy", path: "#" },
       ],
     },
 
     {
       title: "Corporate Enquiry",
-      link: [{ linkTitle: "", path: "#" }],
+      link: [{ linkTitle: "Enquiry", path: "/contact-us" }],
     },
   ];
 

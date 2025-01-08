@@ -30,9 +30,9 @@ function AboutUs() {
         data-aos="fade-up"
       >
         <div className="w-full md:w-1/2">
-          <h2 className="text-5xl text-cyan-400 uppercase">
-            Tomorrow <br />
-            Makers
+          <h2 className="md:text-5xl text-3xl text-cyan-400 uppercase flex md:flex-col flex-row gap-2 mb-3">
+            <span>Tomorrow</span>
+            <span>Makers</span>
           </h2>
         </div>
         <div className="w-full md:w-1/2">

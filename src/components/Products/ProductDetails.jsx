@@ -12,7 +12,11 @@ const ProductDetails = () => {
   const [loading, setLoading] = useState(true);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [productSelectColor, setProductSelectColor] = useState("Classic White");
+  const [selectedImage, setSelectedImage] = useState();
 
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
   const { productId } = useParams();
 
   const productDescription = [
@@ -67,13 +71,14 @@ const ProductDetails = () => {
             (prod) => prod.id === parseInt(productId)
           );
           setProduct(selectedProduct);
+          setSelectedImage(selectedProduct.image)
           setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching product details:", error);
           setLoading(false);
         });
-    }, 2000);
+    }, 10);
   }, [productId]);
 
   if (loading) {
@@ -116,14 +121,35 @@ const ProductDetails = () => {
       <div className="w-full min-h-screen bg-[#131313] text-gray-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
           {/* Images */}
-          <div className=" w-full md:w-1/2 bg-[#131313] px-10 py-10">
-            <img
-              // src={product.image}
-              src="https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
-              alt={`Product image ${product.name}`}
-              className="w-full "
-            />
+          <div className="w-full md:w-1/2 bg-[#131313] px-6 py-6 rounded-md shadow-lg">
+            {/* Main Image */}
+            <div className="bg-black p-4 rounded-md mb-4">
+              <img
+                src={selectedImage}
+                alt={`Product image ${product.name}`}
+                className="w-full h-auto rounded-md object-cover"
+              />
+            </div>
+
+            {/* Thumbnail Images */}
+            <div className="flex justify-center items-center gap-4 flex-wrap">
+              {product.thumbnails.map((thumbnail, index) => (
+                <img
+                  key={index}
+                  src={thumbnail}
+                  alt={`Thumbnail image ${index + 1}`}
+                  className={`w-20 h-20 rounded-md cursor-pointer border-2 ${
+                    selectedImage === thumbnail
+                      ? "border-blue-500"
+                      : "border-transparent"
+                  }`}
+                  onClick={() => handleImageClick(thumbnail)}
+                />
+              ))}
+            </div>
           </div>
+
+          {/* Below Content */}
           <div className="bg-[#000000] w-full md:w-1/2 px-3 py-5 flex flex-col ">
             <div className="flex justify-between ">
               <div className="">

@@ -109,7 +109,7 @@ const Navbar = () => {
           HOME
         </NavLink>
         <NavLink
-          to="/ceiling-fans"
+          to="/fans"
           className={({ isActive }) =>
             isActive ? "text-cyan-400" : "text-white hover:underline"
           }
@@ -189,17 +189,18 @@ const Navbar = () => {
         <div className="fixed top-0 left-0 z-[999] w-full h-screen px-4 md:hidden flex flex-col space-y-4 py-4 bg-black bg-opacity-90 navOpenMenuAnimation">
           <div className="flex justify-end items-center">
             <button
-              className="text-white hover:text-cyan-400 text-lg h-10 w-10 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full border"
+              className="text-white hover:text-cyan-400 text-lg h-10 w-10 hover:bg-gray-700 transition-all duration-300 ease-in-out rounded-full border"
               onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Close menu"
             >
-              <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+              <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
 
           {/* Main Menu */}
           <NavLink
             to="/"
-            className="text-white"
+            className="text-white text-lg hover:underline"
             onClick={() => setMenuOpen(false)}
           >
             HOME
@@ -208,10 +209,10 @@ const Navbar = () => {
           <AccordionMenu
             label="FANS"
             items={[
-              { label: "Celling", link: "/ceiling-fans" },
-              { label: "TPW", link: "" },
-              { label: "Download Catalog", link: "" },
-              { label: "IOT Manual", link: "" },
+              { label: "Ceiling", link: "/ceiling-fans" },
+              { label: "TPW", link: "/ceiling-fan" },
+              { label: "Download Catalog", link: "/fans" },
+              { label: "IOT Manual", link: "/fans" },
             ]}
           />
 
@@ -220,32 +221,35 @@ const Navbar = () => {
             items={[{ label: "About Us", link: "/about-us" }]}
           />
 
-          <AccordionMenu label="MEDIA" items={[{ label: "Blogs", link: "" }]} />
+          <AccordionMenu
+            label="MEDIA"
+            items={[{ label: "Blogs", link: "/about-us" }]}
+          />
 
           <AccordionMenu
             label="SUPPORT"
             items={[
-              { label: "Installation Guide", link: "" },
-              { label: "Warranty", link: "" },
+              { label: "Installation Guide", link: "/fans" },
+              { label: "Warranty", link: "/about-us" },
               { label: "Contact Us", link: "/contact-us" },
-              { label: "Register Complaint", link: "" },
-              { label: "Dealer Locator", link: "" },
-              { label: "FAQs", link: "" },
-              { label: "Terms and Conditions", link: "" },
-              { label: "Privacy Policy", link: "" },
+              { label: "Register Complaint", link: "/contact-us" },
+              { label: "Dealer Locator", link: "/contact-us" },
+              { label: "FAQs", link: "/about-us" },
+              { label: "Terms and Conditions", link: "/about-us" },
+              { label: "Privacy Policy", link: "/about-us" },
             ]}
           />
 
           <NavLink
-            to=""
-            className="text-white"
+            to="/contact-us"
+            className="text-white text-lg hover:underline"
             onClick={() => setMenuOpen(false)}
           >
             CORPORATE ENQUIRY
           </NavLink>
           <NavLink
             to="/contact-us"
-            className="text-white uppercase text-md"
+            className="text-white uppercase text-md hover:underline"
             onClick={() => setMenuOpen(false)}
           >
             Contact Us
@@ -259,25 +263,33 @@ const Navbar = () => {
 {
   /* Accordion Menu Component */
 }
-const AccordionMenu = ({ label, items }) => {
+const AccordionMenu = React.memo(({ label, items }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div>
+    <div className="pb-2 mb-2">
       <button
-        className="text-white text-lg w-full flex justify-between items-center py-2"
-        onClick={() => setIsOpen(!isOpen)}
+        className="text-white text-lg w-full flex justify-between items-center py-2 "
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
+        aria-controls={`${label.replace(" ", "-").toLowerCase()}-content`}
       >
-        {label}
-        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+        <span>{label}</span>
+        <FontAwesomeIcon
+          icon={isOpen ? faChevronUp : faChevronDown}
+          className="transition-transform duration-300"
+        />
       </button>
       {isOpen && (
-        <div className="pl-4">
+        <div
+          id={`${label.replace(" ", "-").toLowerCase()}-content`}
+          className="pl-4 mt-2 space-y-2"
+        >
           {items.map((item, index) => (
             <Link
               to={item.link}
               key={index}
-              className="text-gray-400 hover:underline py-1"
+              className="block text-gray-400 hover:text-white hover:underline transition-colors duration-200"
             >
               {item.label}
             </Link>
@@ -286,6 +298,6 @@ const AccordionMenu = ({ label, items }) => {
       )}
     </div>
   );
-};
+});
 
 export default Navbar;
