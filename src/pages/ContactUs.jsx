@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../components/common/Container";
 import ContactUsForm from "../components/common/ContactUsForm";
 
 function ContactUs() {
+
+  useEffect(() => {
+    document.title =
+      "Contact | Best Fans in India for Elevated experience Savings | Nex Fans";
+  }, []);
   return (
     <div className="w-full bg-[#000000] min-h-screen flex items-center justify-center">
       <Container>

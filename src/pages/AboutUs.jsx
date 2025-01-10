@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Explore from "../components/common/Explore";
 
 function AboutUs() {
+  useEffect(() => {
+    document.title =
+      "About | Best Fans in India for Elevated experience Savings | Nex Fans";
+  }, []);
+
   return (
     <div className=" w-full h-auto md:py-0 py-16">
       {" "}

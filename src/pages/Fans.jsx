@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import NewLounchCard from "../components/common/NewLounchCard";
 import HomeFluidicDetail from "../components/common/HomeFluidicDetail";
@@ -6,6 +6,11 @@ import HomeFluidicDetail from "../components/common/HomeFluidicDetail";
 import Slider from "react-slick";
 
 function Fans() {
+  useEffect(() => {
+    document.title =
+      "View Item | Best Fans in India for Elevated experience Savings | Nex Fans";
+  }, []);
+
   const nextFanData = [
     {
       id: "celling-fans",

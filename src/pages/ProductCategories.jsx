@@ -6,6 +6,11 @@ const ProductCategories = () => {
   const [initialProducts, setInitialProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  useEffect(() => {
+    document.title =
+      "Products | Best Fans in India for Elevated experience Savings | Nex Fans";
+  }, []);
+
   // Fetch products on mount
   useEffect(() => {
     fetch("/products.json")
@@ -47,7 +52,6 @@ const ProductCategories = () => {
         <img src="/images/ceiling.jpg" alt="ceiling" />
       </div>
       <div className="max-w-7xl mx-auto p-4">
-      
         <div className="flex flex-col md:flex-row gap-8">
           <FilterItem
             onApplyFilters={handleApplyFilters}
