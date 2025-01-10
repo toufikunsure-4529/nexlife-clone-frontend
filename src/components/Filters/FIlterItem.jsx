@@ -51,6 +51,13 @@ const FilterItem = ({ onApplyFilters, onClearFilters }) => {
         onChange={handleFilterChange}
       />
       <AccordionMenu
+        label="Sweep"
+        category="sweep"
+        items={["1200 mm (48 inch)"]}
+        selectedFilters={filters.sweep || []}
+        onChange={handleFilterChange}
+      />
+      <AccordionMenu
         label="Speed"
         category="speed"
         items={["High Speed (>370 RPM)", "Comfort Speed (<370 RPM)"]}
@@ -59,16 +66,16 @@ const FilterItem = ({ onApplyFilters, onClearFilters }) => {
       />
       <AccordionMenu
         label="Remote Compatibility"
-        category="speed"
+        category="remote"
         items={["Remote Included", "Works with standard Regulator"]}
-        selectedFilters={filters.speed || []}
+        selectedFilters={filters.remote || []}
         onChange={handleFilterChange}
       />
       <AccordionMenu
         label="BEE Star Rating"
-        category="speed"
+        category="starRating"
         items={["5 Star", "4 Star", "3 Star", "2 Star", "1 Star"]}
-        selectedFilters={filters.speed || []}
+        selectedFilters={filters.starRating || []}
         onChange={handleFilterChange}
       />
       <div className="flex justify-center items-center gap-4 mt-4">

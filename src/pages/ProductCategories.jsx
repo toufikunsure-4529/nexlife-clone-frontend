@@ -47,9 +47,7 @@ const ProductCategories = () => {
         <img src="/images/ceiling.jpg" alt="ceiling" />
       </div>
       <div className="max-w-7xl mx-auto p-4">
-        <button className="px-8 py-3 rounded uppercase mb-9 bg-cyan-400">
-          All Models
-        </button>
+      
         <div className="flex flex-col md:flex-row gap-8">
           <FilterItem
             onApplyFilters={handleApplyFilters}

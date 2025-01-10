@@ -19,6 +19,7 @@ function ContactUsForm() {
   });
 
   const [errors, setErrors] = useState({});
+  const [successMsg, setSuccessMsg] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,8 +40,20 @@ function ContactUsForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
+      // Send the form data to the server
       console.log("Form submitted:", formData);
+      setSuccessMsg(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        message: "",
+      });
     }
+    setTimeout(() => {
+      setSuccessMsg(false); // Reset the success message after 5 seconds
+    }, 5000);
   };
 
   return (
@@ -203,6 +216,10 @@ function ContactUsForm() {
               )}
             </div>
 
+            <div className="text-green-500 text-sm mb-4">
+              {successMsg &&
+                "Thank you for contacting us. We will get back to you soon."}
+            </div>
             <div>
               <button
                 type="submit"

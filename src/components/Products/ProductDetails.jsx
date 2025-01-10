@@ -78,7 +78,7 @@ const ProductDetails = () => {
           console.error("Error fetching product details:", error);
           setLoading(false);
         });
-    }, 10);
+    }, 1000);
   }, [productId]);
 
   if (loading) {

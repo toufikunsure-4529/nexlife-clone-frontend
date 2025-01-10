@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
@@ -17,6 +17,40 @@ const Navbar = () => {
   const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const [searchMenuOpen, setSearchMenuOpen] = useState(false);
 
+  const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const navigate = useNavigate();
+
+  // Fetch products on mount
+  useEffect(() => {
+    fetch("/products.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch product details");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((error) =>
+        alert("Error fetching product details: " + error.message)
+      );
+  }, []);
+
+  // Filter products based on search query
+  useEffect(() => {
+    if (searchQuery) {
+      const results = products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredProducts(results);
+    } else {
+      setFilteredProducts([]);
+    }
+  }, [searchQuery, products]);
+
   useEffect(() => {
     const scrollWindow = () => {
       if (window.scrollY > 200) {
@@ -31,6 +65,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", scrollWindow);
     };
   }, []);
+
   return (
     <nav
       className={`w-full shadow-md md:bg-[#000000] bg-[#131313] transition-transform duration-700 ease-in-out text-white
@@ -134,21 +169,20 @@ const Navbar = () => {
       {/* Search Menu */}
       {searchMenuOpen && (
         <div
-          className="fixed top-0 left-0 z-[999] w-full h-screen px-4 flex flex-col space-y-4 py-4 navOpenMenuAnimation "
+          className="fixed top-0 left-0 z-[999] w-full h-screen px-4 flex flex-col space-y-4 py-4 navOpenMenuAnimation"
           style={{
             backgroundColor: "rgba(0, 0, 0, 0.9)",
           }}
         >
-          {" "}
           <div className="flex justify-end items-center">
             <button
-              className="text-white hover:text-cyan-400 text-lg  text-center h-10 w-10 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full border "
+              className="text-white hover:text-cyan-400 text-lg text-center h-10 w-10 hover:bg-gray-100 transition-all duration-300 ease-in-out rounded-full border"
               onClick={() => setSearchMenuOpen(!searchMenuOpen)}
             >
               <FontAwesomeIcon icon={searchMenuOpen ? faTimes : faBars} />
             </button>
           </div>
-          {/* Search Box with Inline Layout */}
+          {/* Search Box */}
           <div className="relative flex items-center justify-center md:px-44">
             <input
               type="text"
@@ -156,10 +190,30 @@ const Navbar = () => {
               id="searchItem"
               placeholder="What are you looking for?"
               className="flex-grow h-12 px-4 py-8 text-lg text-gray-200 bg-[#333333] rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <div className="bg-[#333333] text-gray-200 h-1/2 w-2/3 mx-auto rounded text-center py-7 hidden">
-            <p>Search Result</p>
+          {/* Search Results */}
+          <div className="bg-[#333333] text-gray-200 w-2/3 mx-auto rounded py-4">
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="cursor-pointer hover:bg-gray-700 p-2 rounded"
+                  onClick={() => {
+                    setSearchMenuOpen(false); // Close the search menu
+                    navigate(`/ceiling-fans/${product.id}`);
+                  }}
+                >
+                  {product.name}
+                </div>
+              ))
+            ) : (
+              <p className="text-center text-[#070707]">
+                {searchQuery ? "No results found" : "Type to search"}
+              </p>
+            )}
           </div>
         </div>
       )}

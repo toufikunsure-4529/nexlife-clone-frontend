@@ -19,8 +19,8 @@ function Footer({ footerBg, isLogoVisible = true }) {
     {
       title: "Fans",
       link: [
-        { linkTitle: "Ceiling", path: "/ceiling-fan" },
-        { linkTitle: "TPW", path: "/ceiling-fan" },
+        { linkTitle: "Ceiling", path: "/ceiling-fans" },
+        { linkTitle: "TPW", path: "/ceiling-fans" },
         { linkTitle: "Download Catalogue", path: "/fans" },
         { linkTitle: "IOT Manual", path: "/fans" },
       ],

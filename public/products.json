@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 1001,
     "name": "Nex Dryft A95 BLDC IoT Classic White",
     "description": "Elegant Design with Effortless Air Delivery",
     "price": 14990,
@@ -8,88 +8,83 @@
     "sweep": "1200 mm (48 inch)",
     "speed": "High Speed (>370 RPM)",
     "remote": "Remote Include",
-    "starRating": 9,
-    "image": "https://nexlife.in/ProductImgs/20/listing/1.png",
+    "starRating": "5 Star",
+    "image": "/images/products/1/main.png",
     "thumbnails": [
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+      "/images/products/1/card1.jpeg",
+      "/images/products/1/card2.jpg",
+      "/images/products/1/card3.jpg",
+      "/images/products/1/card4.jpg",
+      "/images/products/1/main.png"
     ]
   },
   {
-    "id": 2,
-    "name": "Nex Aero 900 Smart Ceiling Fan",
-    "description": "Elegant Design with Effortless Air Delivery",
-
-    "price": 20000,
-    "airDelivery": "230 - 239 CMM",
+    "id": 1002,
+    "name": "NEX DRYFT A90 BLDC Classic White",
+    "description": "Astonishing Performance with Low Noise ABS Blades",
+    "price": 12590,
+    "airDelivery": "240 - 249 CMM",
     "sweep": "1200 mm (48 inch)",
     "speed": "Comfort Speed (<370 RPM)",
     "remote": "Works with standard Regulator",
-    "starRating": 5,
-    "image": "https://nexlife.in/ProductImgs/19/listing/1.png",
+    "starRating": "4 Star",
+    "image": "/images/products/2/main.png",
+    "thumbnails": ["/images/products/2/1.jpg", "/images/products/2/main.png"]
+  },
+  {
+    "id": 1003,
+    "name": "NEX DRYFT A90 Classic White",
+    "description": "Astonishing Performance with Low Noise ABS Blades",
+    "price": 10790,
+    "airDelivery": "230 - 239 CMM",
+    "speed": "High Speed (>370 RPM)",
+    "remote": "Remote Include",
+    "starRating": "4 Star",
+    "image": "/images/products/3/main.png",
+    "thumbnails": ["/images/products/3/1.jpg", "/images/products/3/main.png"]
+  },
+  {
+    "id": 1004,
+    "name": "Nex Glyde A80 BLDC",
+    "description": "Elegant Design with Effortless Air Delivery",
+    "price": 8790,
+    "airDelivery": "220 - 229 CMM",
+    "speed": "Comfort Speed (<370 RPM)",
+    "remote": "Works with standard Regulator",
+    "starRating": "3 Star",
+    "image": "/images/products/4/main.png",
     "thumbnails": [
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
+      "/images/products/4/1.jpg",
+      "/images/products/4/2.jpg",
+      "/images/products/4/3.jpg",
+      "/images/products/4/4.jpg",
+      "/images/products/4/main.png"
     ]
   },
   {
-    "id": 3,
-    "name": "Nex Stellar A85 LED Light Fan",
+    "id": 1005,
+    "name": "NEX Glyde A70 BLDC Cotton white",
     "description": "Elegant Design with Effortless Air Delivery",
-
-    "price": 10990,
+    "price": 7890,
     "airDelivery": "240 - 249 CMM",
     "sweep": "1200 mm (48 inch)",
     "speed": "High Speed (>370 RPM)",
     "remote": "Remote Include",
-    "starRating": 3,
-    "image": "https://nexlife.in/ProductImgs/18/listing/1.png",
-    "thumbnails": [
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
-    ]
+    "starRating": "3 Star",
+    "image": "/images/products/5/main.png",
+    "thumbnails": ["/images/products/5/1.jpg", "/images/products/5/main.png"]
   },
   {
-    "id": 4,
-    "name": "Nex Stellar A85 LED Light Fan",
+    "id": 1006,
+    "name": "Nex Glyde A40 Snow white",
     "description": "Elegant Design with Effortless Air Delivery",
-
-    "price": 10990,
+    "price": 6490,
     "airDelivery": "240 - 249 CMM",
     "sweep": "1200 mm (48 inch)",
-    "speed": "High Speed (>370 RPM)",
+    "speed": "High Speed (<370 RPM)",
     "remote": "Remote Include",
-    "starRating": 5,
-    "image": "https://nexlife.in/ProductImgs/18/listing/1.png",
-    "thumbnails": [
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Nex Stellar A85 LED Light Fan",
-    "description": "Elegant Design with Effortless Air Delivery",
-    "price": 10990,
-    "airDelivery": "240 - 249 CMM",
-    "sweep": "1200 mm (48 inch)",
-    "speed": "High Speed (>370 RPM)",
-    "remote": "Remote Include",
-    "starRating": 4,
-    "image": "https://nexlife.in/ProductImgs/18/listing/1.png",
-    "thumbnails": [
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg",
-      "https://nexlife.in/ProductImgs/20/dettails/1.jpeg"
-    ]
+    "starRating": "2 Star",
+    "image": "/images/products/6/main.png",
+    "thumbnails": ["/images/products/6/main.png"]
   }
 ]

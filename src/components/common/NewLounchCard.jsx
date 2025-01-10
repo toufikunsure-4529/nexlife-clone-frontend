@@ -58,7 +58,6 @@ function NewLaunchCard() {
         {/* Right Content Section */}
         <div
           className="w-full p-4 md:p-6 bg-[#1a1a1a] rounded-lg"
-          data-aos="fade-left"
         >
           {tabs.map(
             (tab) =>
