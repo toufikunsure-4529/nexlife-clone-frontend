@@ -6,7 +6,7 @@ function Notification() {
   return (
     <>
       {/* Top Notification Bar */}
-      <div className="bg-cyan-500 text-gray-100 w-full hidden md:flex  items-center justify-between text-sm py-2">
+      <div className="bg-[#00B0AD] text-gray-100 w-full hidden md:flex  items-center justify-between text-sm py-2">
         <p className="mx-4">
           <span>
             <FontAwesomeIcon icon={faComments} />
